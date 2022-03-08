@@ -1,14 +1,15 @@
 // //Callback Function 
-
+ 
 setTimeout(function(){
-    //document.getElementById('output').innerHTML = "output";
-    console.log("Hello World!");
-}, 5000);
+    document.getElementById('output').innerHTML = "output";
 
-// let persons = [
-//     {firstName: "Simanta", lastName: "Paul"},
-//     {firstName: "Fazle", lastName: "Rahat"}
-// ]
+    }, 5000);
+ 
+
+let persons = [
+    {firstName: "Md", lastName: "Junayed"},
+    {firstName: "Jannatul", lastName: "Ferdaus"}
+]
 
 // function createPerson(person) {
 //    setTimeout(function() {
@@ -27,28 +28,25 @@ setTimeout(function(){
 //     }, 1000);
 // }
 
-// // let persons = [
-// //     {firstName: "Simanta", lastName: "Paul"},
-// //     {firstName: "Fazle", lastName: "Rahat"}
-// // ]
+ 
 
-// // function createPerson(person, callback) {
-// //    setTimeout(function() {
-// //        persons.push(person);
-// //        callback();
-// //    }, 2000); 
-// // }
+function createPerson(person, callback) {
+   setTimeout(function() {
+       persons.push(person);
+       callback();
+   }, 2000); 
+}
 
-// // function getPerson() {
-// //     setTimeout(function(){
-// //         let output = '';
-// //         persons.forEach(function(person){
-// //             output += `<li>${person.firstName} ${person.lastName}</li>`
-// //         }); 
-// //         document.getElementById('output').innerHTML = output;
-// //     }, 500);
-// // }
+function getPerson() {
+    setTimeout(function(){
+        let output = '';
+        persons.forEach(function(person){
+            output += `<li>${person.firstName} ${person.lastName}</li>`
+        }); 
+        document.getElementById('output').innerHTML = output;
+    }, 500);
+}
 
-// //setTimeout()
-// //createPerson({firstName:"Rony", lastName: "Chy"}, getPerson)
-// createPerson({firstName:"Rony", lastName: "Chy"})
+//setTimeout()
+createPerson({firstName:"Rony", lastName: "Ahmed"}, getPerson)
+//createPerson({firstName:"Rony", lastName: "Chy"})
